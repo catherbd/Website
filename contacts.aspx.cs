@@ -12,21 +12,6 @@ public partial class contacts : System.Web.UI.Page
 
     }
 
-    protected void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
-    {
-        
-    }
-
-    protected void Wizard1_FinishButtonClick1(object sender, WizardNavigationEventArgs e)
-    {
-     
-    }
-
-    protected void RadioButtonPhone_CheckedChanged(object sender, EventArgs e)
-    {
-
-    }
-
     protected void Wizard1_FinishButtonClick2(object sender, WizardNavigationEventArgs e)
     {
         Result.Text = "Your Submission has been successfully completed and processed with the following:";
@@ -36,6 +21,5 @@ public partial class contacts : System.Web.UI.Page
         Result.Text += "<br />You prefer to be contacted by: " + preference.SelectedValue;
         Result.Text += "<br />Interested in: " + Products.SelectedValue;
         Result.Text += "<br />Comments: " + txtComments.Text;
-
     }
 }
