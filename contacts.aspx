@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeFile="contacts.aspx.cs" Inherits="contacts" %>
+﻿<%@ Page Title="Contacts" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeFile="contacts.aspx.cs" Inherits="contacts" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -13,7 +13,7 @@
     </header>
        
      <!--Top Navigation bar-->
-            <div id="nav">
+          <%--  <div id="nav">
                 <ul>
                     <li><a href="Default.aspx">Home</a></li>
                     <li><a href="products.aspx">Products</a></li>
@@ -21,10 +21,12 @@
                     <li><a href="about.aspx">About Us</a></li>
                     <li><a href="contacts.aspx">Contact Us</a></li>
                 </ul>
-    </div>
+    </div>--%>
+      <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
     <div>
         <img id="banner" alt="logo2" src="contact.jpg" />
     </div>
+        
 </div>
          <!--Wizard to create a contacts form-->        
         <center>

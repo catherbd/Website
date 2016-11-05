@@ -1,4 +1,4 @@
-﻿<%@ Page Title="My Website" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default"  %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -11,7 +11,7 @@
         </p>
     </header>       
 <!--Top Navigation bar. Clicking on the home tab will refresh the homepage-->
-            <div id="nav">
+<%--            <div id="nav">
                 <ul>
                     <li><a href="Default.aspx">Home</a></li>
                     <li><a href="products.aspx">Products</a></li>
@@ -19,7 +19,8 @@
                     <li><a href="about.aspx">About Us</a></li>
                     <li><a href="contacts.aspx">Contact Us</a></li>
                 </ul>
-    </div>
+    </div>--%>
+    <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
     <div>
         <img alt="logo" class="animated slideInDown" src="banner.png" style="height: 100%; width: 100%; object-fit: contain" />
     </div>
@@ -48,6 +49,6 @@
                 <p>
                     Three important topics in biology are covered in the website. Students will learn interesting information about DNA such as how DNA replicates as see in the picture to the left. In addition, this website also contain information about protein syntesis. The last topic is about the basic animal cells and plant cells structures. </p>
     </div>
-    
+   
 </asp:Content>
 

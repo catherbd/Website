@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -10,7 +10,8 @@
             <%: DateTime.Now.ToString() %>
         </p>
     </header>
-    <div id="nav">
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+   <%-- <div id="nav">
         <ul>
             <li><a href="Default.aspx">Home</a></li>
             <li><a href="products.aspx">Products</a></li>
@@ -18,7 +19,7 @@
             <li><a href="about.aspx">About Us</a></li>
             <li><a href="contacts.aspx">Contact Us</a></li>
         </ul>
-    </div>
+    </div>--%>
 </div>
 </asp:Content>
 
