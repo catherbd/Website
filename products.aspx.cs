@@ -33,10 +33,12 @@ public partial class products : BasePage
 
     protected void Add_Click(object sender, EventArgs e)
     {
+      
         if (leftListBox.SelectedIndex == -1)
-        { 
+        {
             Server.Transfer("error.aspx?err_code=7");
         }
+       
         rightListBox.Items.Add(leftListBox.SelectedItem);
         leftListBox.Items.Remove(leftListBox.SelectedItem);
         rightListBox.ClearSelection();
@@ -45,7 +47,7 @@ public partial class products : BasePage
         foreach (object item in rightListBox.Items)
         {
             sb.Append(item.ToString());
-            sb.AppendLine();
+            sb.Append("<br>");
 
         }
 
@@ -76,7 +78,7 @@ public partial class products : BasePage
         foreach (object item in rightListBox.Items)
         {
             sb.Append(item.ToString());
-            sb.Append("  ");
+            sb.Append("<br>"); 
 
         }
 
