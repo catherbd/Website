@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frontend.master.cs" Inherits="MasterPages_Frontend" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>My Website</title>
+   <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/> <!--To use an animate library-->--%> 
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="/Scripts/modernizr-2.7.1.js">
+  <asp:ScriptReference Path="~/Scripts/jquery-3.1.1.min.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery-ui-1.12.1.min.js" />  
+<asp:ScriptReference Name="jquery" />
+<asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />
+
+    </script>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div id="right"> 
+            <asp:LoginName ID="LoginName1" runat="server" FormatString="Logged in as {0}" />
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <LoggedInTemplate>
+                        <asp:LoginStatus ID="LoginStatus2" runat="server" />
+                    </LoggedInTemplate>
+                </asp:LoginView>
+        </div>
+         <div id="nav">
+                <asp:Menu ID="Menu1" runat="server" CssClass="nav" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False" BorderStyle="None"></asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+              </div>  
+          <header>
+       <img class="animated slideInDown" style='height: 100%; width: 100%; object-fit: contain'src="ezbanner.jpg" alt="logo" />  
+    </header>   
+       
+        <div id="sidenav">
+        <!--Side navigation bar--->          
+            <ul>
+             <li><a href="DNA.aspx">DNA Information</a></li>
+             <li><a href="protein.aspx">Protein Synthesis</a></li>
+             <li><a href="cell.aspx">Cell Biology</a></li>
+             <li><a href="quiz.aspx">Take a Quiz</a></li>
+             <li><a href="games.aspx">Games</a></li>
+                 
+        </ul>
+    </div> 
+               
+ <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+     
+</asp:ContentPlaceHolder>
+     
+    
+
+ <!--The footer at the botom of the page with the copyright-->
+            <div id="footer">
+                
+                 <p>
+                   @2017 Catherine Do ASP.NET Application
+                </p>
+    </div>
+
+    </form>
+</body>
+</html>
